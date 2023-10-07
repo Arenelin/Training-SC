@@ -1,5 +1,3 @@
-// import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
 import { Card } from './components/Card';
@@ -25,8 +23,47 @@ function App() {
                 <BodyTopText color={MyTheme.colors.description}>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</BodyTopText>
               </BodyTop>
               <BodyBottom>
-                <Button as='a' href='https://www.google.ru/' btnType={'link'}>See more</Button>
-                <Button btnType={'button'}>Save</Button>
+                <Button as='a' href='https://www.google.ru/' btnType={'link'} primaryColor={MyTheme.colors.primaryColorFirstCard} secondaryColor={MyTheme.colors.secondaryColorFirstCard}>See more</Button>
+                <Button btnType={'button'} primaryColor={MyTheme.colors.primaryColorFirstCard} secondaryColor={MyTheme.colors.secondaryColorFirstCard}>Save</Button>
+              </BodyBottom>
+            </Body>
+          </Card>
+          <Card>
+            <Image src={MyTheme.images.cardImage} />
+            <Body>
+              <BodyTop>
+                <BodyTopHeader>Headline</BodyTopHeader>
+                <BodyTopText color={MyTheme.colors.description}>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</BodyTopText>
+              </BodyTop>
+              <BodyBottom>
+                <Button as='a' href='https://www.google.ru/' btnType={'link'} primaryColor={MyTheme.colors.primaryColorSecondCard} secondaryColor={MyTheme.colors.secondaryColorSecondCard}>See more</Button>
+                <Button btnType={'button'} primaryColor={MyTheme.colors.primaryColorSecondCard} secondaryColor={MyTheme.colors.secondaryColorSecondCard}>Save</Button>
+              </BodyBottom>
+            </Body>
+          </Card>
+          <Card>
+            <Image src={MyTheme.images.cardImage} />
+            <Body>
+              <BodyTop>
+                <BodyTopHeader>Headline</BodyTopHeader>
+                <BodyTopText color={MyTheme.colors.description}>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</BodyTopText>
+              </BodyTop>
+              <BodyBottom>
+                <Button as='a' href='https://www.google.ru/' btnType={'link'} primaryColor={MyTheme.colors.primaryColorThirdCard} secondaryColor={MyTheme.colors.secondaryColorThirdCard}>See more</Button>
+                <Button btnType={'button'} primaryColor={MyTheme.colors.primaryColorThirdCard} secondaryColor={MyTheme.colors.secondaryColorThirdCard}>Save</Button>
+              </BodyBottom>
+            </Body>
+          </Card>
+          <Card>
+            <Image src={MyTheme.images.cardImage} />
+            <Body>
+              <BodyTop>
+                <BodyTopHeader>Headline</BodyTopHeader>
+                <BodyTopText color={MyTheme.colors.description}>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</BodyTopText>
+              </BodyTop>
+              <BodyBottom>
+                <Button as='a' href='https://www.google.ru/' btnType={'link'} primaryColor={MyTheme.colors.primaryColorFourthCard} secondaryColor={MyTheme.colors.secondaryColorFourthCard}>See more</Button>
+                <Button btnType={'button'} primaryColor={MyTheme.colors.primaryColorFourthCard} secondaryColor={MyTheme.colors.secondaryColorFourthCard}>Save</Button>
               </BodyBottom>
             </Body>
           </Card>
@@ -43,6 +80,22 @@ const Wrapper = styled.div`
 const Box = styled.div`
 max-width:1250px;
 margin: 0 auto;
-/* gap: 10px; */
+gap: 10px;
+padding-top: 100px;
+display: grid;
+grid-template-columns: repeat(4, minmax(280px, 300px));
+@media ${MyTheme.mediaQueries.computer}{
+  grid-template-columns: repeat(2, minmax(280px, 300px));
+  justify-content: center;
+  gap: 30px;
+};
+@media ${MyTheme.mediaQueries.tablet}{
+  grid-template-columns: repeat(2, minmax(280px, 300px));
+  justify-content: center;
+  gap: 15px;
+};
+@media ${MyTheme.mediaQueries.mobile}{
+  grid-template-columns: repeat(1, minmax(280px, 300px));
+};
 `
 export default App;

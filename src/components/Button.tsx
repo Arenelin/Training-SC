@@ -1,9 +1,40 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 type ButtonPropsType = {
-   btnType: 'link' | 'button'
+   btnType: 'link' | 'button',
+   primaryColor?: string,
+   secondaryColor?: string
 }
 
 export const Button = styled.button<ButtonPropsType>`
-   
+font-size: 10px;
+font-weight: 700;
+line-height: 20px;
+border-radius: 5px;
+transition: all .7s;
+border: 2px solid ${props => props.primaryColor};
+
+& + button{
+   margin-left: 10px;
+}
+
+   ${props => props.btnType === 'link' && css<ButtonPropsType>`
+      background-color: ${props => props.primaryColor};
+      color: ${props => props.secondaryColor};
+      padding: 7.5px 18.5px;
+      &:hover{
+         color: ${props => props.primaryColor};
+         background-color: ${props => props.secondaryColor};
+      }
+   `}
+
+   ${props => props.btnType === 'button' && css<ButtonPropsType>`
+      background-color: ${props => props.secondaryColor};
+      color: ${props => props.primaryColor};
+      padding: 3px 29.5px;
+      &:hover{
+         color: ${props => props.secondaryColor};
+         background-color: ${props => props.primaryColor};
+      }
+   `}
 `
