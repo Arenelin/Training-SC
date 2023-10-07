@@ -1,6 +1,4 @@
 import styled from "styled-components";
 
 
-export const BodyBottom = styled.div`
-   
-`
+export const BodyBottom = styled.div``

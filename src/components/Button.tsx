@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { MyTheme } from "../styles/Theme";
 
 type ButtonPropsType = {
    btnType: 'link' | 'button',
@@ -8,8 +9,8 @@ type ButtonPropsType = {
 
 export const Button = styled.button<ButtonPropsType>`
 font-size: 10px;
-font-weight: 700;
-line-height: 20px;
+font-weight: ${MyTheme.sizes.fontWeightGeneral};
+line-height: ${MyTheme.sizes.lineHeightGeneral};
 border-radius: 5px;
 transition: all .7s;
 border: 2px solid ${props => props.primaryColor};

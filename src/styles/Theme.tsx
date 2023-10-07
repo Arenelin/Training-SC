@@ -20,5 +20,9 @@ export const MyTheme = {
       computer: 'screen and (max-width: 1150px)',
       tablet: 'screen and (max-width: 768px)',
       mobile: 'screen and (max-width: 590px)',
+   },
+   sizes: {
+      lineHeightGeneral: '20px',
+      fontWeightGeneral: 700,
    }
 }
