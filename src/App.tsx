@@ -76,6 +76,9 @@ function App() {
 const Wrapper = styled.div`
   background-color: #F5F5F5;
   height: 100vh;
+  @media ${MyTheme.mediaQueries.mobile}{
+    height: 100%;
+};
 `
 const Box = styled.div`
 max-width:1250px;
@@ -87,15 +90,16 @@ grid-template-columns: repeat(4, minmax(280px, 300px));
 @media ${MyTheme.mediaQueries.computer}{
   grid-template-columns: repeat(2, minmax(280px, 300px));
   justify-content: center;
+  padding: 50px 0px;
   gap: 30px;
 };
 @media ${MyTheme.mediaQueries.tablet}{
-  grid-template-columns: repeat(2, minmax(280px, 300px));
-  justify-content: center;
+  padding: 65px 0px 50px;
   gap: 15px;
 };
 @media ${MyTheme.mediaQueries.mobile}{
   grid-template-columns: repeat(1, minmax(280px, 300px));
+  padding: 30px 0px;
 };
 `
 export default App;
